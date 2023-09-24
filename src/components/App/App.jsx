@@ -9,7 +9,7 @@ function App() {
   const getGalleryItems = () => {
     axios.get('/gallery')
     .then(response => {
-      console.log (response.data);
+      console.log(response.data);
       setGalleryItems(response.data);
     }).catch(error => {
       console.log(error);
@@ -19,22 +19,16 @@ function App() {
   
   useEffect(() => {
     getGalleryItems();
-  })
+  }, []);
 
-
-
-
-
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-        <GalleryList galleryItems={galleryItems} />
-        <img src="images/goat_small.jpg"/>
-      </div>
-    );
+  return (
+    <div id="App">
+      <header id="App-header">
+        <h1 id="App-title">Cool A** Animals</h1>
+      </header>
+      <GalleryList galleryItems={galleryItems} getGalleryItems={getGalleryItems} />
+    </div>
+  );
 }
 
 export default App;

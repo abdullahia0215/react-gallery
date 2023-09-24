@@ -1,9 +1,8 @@
 import React from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem.jsx';
 
-
 const GalleryList = ({ galleryItems, getGalleryItems }) => {
-  console.log(" in GalleryList:");
+  console.log("in GalleryList:", galleryItems);
   return (
     <div>
       {galleryItems.map(item => (

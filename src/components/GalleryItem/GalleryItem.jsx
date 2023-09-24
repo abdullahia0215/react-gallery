@@ -1,35 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+
 const GalleryItem = ({ item, getGalleryItems }) => { 
-    console.log("in GalleryItem:", item);
+    console.log("Item in GalleryItem:", item);
 
     const [bioVisible, setbioVisible] = useState(false);
 
-    const togglebioVisibility = () => {
+
+    const toggleDescription = () => {
         setbioVisible(!bioVisible);
     }
     const increaseLikes = (event) => {
-        axios.put(`/gallery/liked/${item.id}`)
+        event.stopPropagation();
+        axios.put(`/gallery/like/${item.id}`)
             .then(response => {
                 getGalleryItems();
             })
             .catch(error => {
-                console.log(error);
-                console.error('Error updating likes');
+                console.error('Error updating likes', error);
             });
     }
     return (
-        <div className="GalleryItem" onClick={togglebioVisibility}>
+        <div  onClick={toggleDescription}>
             {bioVisible ? 
                 <p>{item.description}</p> : 
-                <img src={item.path} alt={item.description}/>
+                <img src={item.path} alt={item.description} style={{width: "100px", height: "auto"}} />
             }
             <p>
-                Likes: {item.likes}
+                {item.likes} people liked this
                 <button onClick={increaseLikes}>Like</button>
             </p>
         </div>
     );
-};
+}
+
 export default GalleryItem;
+    
    
