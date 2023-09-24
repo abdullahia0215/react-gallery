@@ -11,7 +11,7 @@ The Gallery App is a React application that displays a collection of images and 
 - Increase the number of likes for each image
 - Fetch the updated gallery items from the server after liking an image
 
-## Problem Statement
+## Problems Solved
 
 The Gallery App solves the problem of showcasing a collection of images and allowing users to interact with them by liking and viewing their descriptions. It provides a user-friendly interface to browse through the images and engage with the content.
 
