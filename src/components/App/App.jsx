@@ -1,7 +1,7 @@
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import GalleryList from './GalleryList';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
   const [galleryItems, setGalleryItems] = useState([]);
