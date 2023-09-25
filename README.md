@@ -40,3 +40,7 @@ To run the Gallery App locally, follow these steps:
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
+## Other Notes
+- Thank you to Emerging Digital Academy for helping make this a reality.
+- If you have any questions or comments, please email abdullahia0215@gmail.com
