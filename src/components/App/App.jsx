@@ -24,7 +24,7 @@ function App() {
   return (
     <div id="App">
       <header id="App-header">
-        <h1 id="App-title">Cool A** Animals</h1>
+        <h1 id="App-title">Cool A** Animal Gallery</h1>
       </header>
       <GalleryList galleryItems={galleryItems} getGalleryItems={getGalleryItems} />
     </div>

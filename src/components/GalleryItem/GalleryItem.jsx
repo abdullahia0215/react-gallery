@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart }  from '@fortawesome/free-solid-svg-icons';
 
 const GalleryItem = ({ item, getGalleryItems }) => { 
-    console.log("Item in GalleryItem:", item);
 
     // State variable to track the visibility of the gallery item's description
     const [bioVisible, setbioVisible] = useState(false);
