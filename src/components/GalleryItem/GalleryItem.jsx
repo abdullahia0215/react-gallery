@@ -30,7 +30,7 @@ const GalleryItem = ({ item, getGalleryItems }) => {
         <div onClick={toggleDescription} style={{backgroundColor: "#222", color: "#fff", padding: "10px", borderRadius: "5px"}}>
             {bioVisible ? 
                 <p style={{marginBottom: "5px"}}>{item.description}</p> : 
-                <img src={item.path} alt={item.description} style={{width: "100px", height: "100px"}} />
+                <img src={item.path} alt={item.description} style={{width: "300px", height: "300px"}} />
             }
             <p>
                 {item.likes} people liked this
