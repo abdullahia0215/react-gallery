@@ -9,7 +9,7 @@ const GalleryItem = ({ item, getGalleryItems }) => {
     const [bioVisible, setbioVisible] = useState(false);
 
     // Function to toggle the visibility of the gallery item's description
-    const toggleDescription = () => {
+    const toggleBio = () => {
         setbioVisible(!bioVisible);
     }
 
@@ -26,7 +26,7 @@ const GalleryItem = ({ item, getGalleryItems }) => {
     }
 
     return (
-        <div onClick={toggleDescription} style={{backgroundColor: "#222", color: "#fff", padding: "10px", borderRadius: "5px"}}>
+        <div onClick={toggleBio} style={{backgroundColor: "#222", color: "#fff", padding: "10px", borderRadius: "5px"}}>
             {bioVisible ? 
                 <p style={{marginBottom: "5px"}}>{item.description}</p> : 
                 <img src={item.path} alt={item.description} style={{width: "300px", height: "300px"}} />
