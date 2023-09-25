@@ -27,15 +27,15 @@ To run the Gallery App locally, follow these steps:
 
 1. Clone the repository
 2. Navigate to the project directory
-3. Install the dependencies
-4. Start the development server: `npm start`
+3. Install the dependencies: npm install --save @fortawesome/react-fontawesome AND npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+4. Start the development server: `npm run server` and `npm run client`
 5. Open your browser and navigate to `http://localhost:3000`
 
 ## Usage
 
-- Upon launching the app, you will see a collection of images displayed on the screen.
+- Upon launching the app, you will see a collection of (2) images displayed on the screen.
 - Clicking on an image will toggle the visibility of its description.
-- To like an image, click the "Like" button below the image. The number of likes will be updated and fetched from the server.
+- To like an image, click the "Heart" button below the image. The number of likes will be updated and fetched from the server.
 
 ## Contributing
 
