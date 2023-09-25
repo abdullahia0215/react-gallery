@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart }  from '@fortawesome/free-solid-svg-icons';
 
 const GalleryItem = ({ item, getGalleryItems }) => { 
     console.log("Item in GalleryItem:", item);
@@ -25,14 +27,16 @@ const GalleryItem = ({ item, getGalleryItems }) => {
     }
 
     return (
-        <div onClick={toggleDescription}>
+        <div onClick={toggleDescription} style={{backgroundColor: "#222", color: "#fff", padding: "10px", borderRadius: "5px"}}>
             {bioVisible ? 
-                <p>{item.description}</p> : 
-                <img src={item.path} alt={item.description} style={{width: "100px", height: "auto"}} />
+                <p style={{marginBottom: "5px"}}>{item.description}</p> : 
+                <img src={item.path} alt={item.description} style={{width: "100px", height: "100px"}} />
             }
             <p>
                 {item.likes} people liked this
-                <button onClick={increaseLikes}>Like</button>
+                <button onClick={increaseLikes} style={{backgroundColor: "transparent", border: "none", color: "#fff", cursor: "pointer"}}>
+                    <FontAwesomeIcon icon={faHeart} />
+                </button>
             </p>
         </div>
     );
