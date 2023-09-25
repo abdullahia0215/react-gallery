@@ -33,7 +33,7 @@ To run the Gallery App locally, follow these steps:
 
 ## Usage
 
-- Upon launching the app, you will see a collection of (2) images displayed on the screen.
+- Upon launching the app, you will see a collection of images displayed on the screen.
 - Clicking on an image will toggle the visibility of its description.
 - To like an image, click the "Heart" button below the image. The number of likes will be updated and fetched from the server.
 
